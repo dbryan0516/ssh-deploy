@@ -27,6 +27,7 @@ const remoteCmd = async (content, privateKeyPath, isRequired, label) => new Prom
           const message = `⚠️ [CMD] Remote script failed: ${err.message}`;
           console.warn(`${message} \n`, data, stderr);
           console.warn("logging warning 1");
+          console.warn("isRequired", isRequired);
           handleError(message, isRequired, reject);
         } else {
           const limited = data.substring(0, dataLimit);
