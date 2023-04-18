@@ -4,10 +4,10 @@ const { writeToFile } = require('./helpers');
 
 const handleError = (message, isRequired, callback) => {
   if (isRequired) {
-    console.log("calling callback");
+    console.warn("calling callback");
     callback(new Error(message));
   } else {
-    console.log("logging warning");
+    console.warn("logging warning");
     console.warn(message);
   }
 };
